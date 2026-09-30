@@ -1,28 +1,36 @@
-# Добавление документа
+# Add an AI document
 
-## Результат
+## Outcome
 
-Создай одну новую статью или запись эксперимента, добавь её в индекс и проверь структуру репозитория.
+Create one new article or experiment record, add it to the index, and validate the repository.
 
-## Порядок работы
+## Workflow
 
-1. Определи тему, тип документа, вендоров и границы материала.
-2. Проверь `README.md` и близкие статьи. Если тема уже раскрыта, предложи дополнение вместо дубликата.
-3. Выбери `templates/article.md` или `templates/experiment.md`.
-4. Собери первичные источники. Для изменяемых фактов открой актуальные официальные страницы.
-5. Предложи пользователю путь, структуру документа и список основных источников.
-6. Дождись явного подтверждения перед созданием файла.
-7. Заполни все поля frontmatter и раздел `Источники`.
-8. Поставь `status: current` только после проверки всех существенных утверждений. Иначе используй `needs-review`.
-9. Добавь ссылку в навигацию `README.md`.
-10. Запусти `python3 scripts/validate_docs.py` и исправь ошибки, относящиеся к изменению.
+1. Identify the topic, document type, vendors, and scope.
+2. Check `README.md` and related articles. If the topic is already covered, propose extending an existing article
+   instead of creating a duplicate.
+3. Choose the template by the requested outcome:
+   - Use `templates/article.md` for an explanation, comparison, or guide that synthesizes sourced information.
+   - Use `templates/experiment.md` for a reproducible test of specific behavior, recording the question,
+     environment, steps, expected result, and actual result.
+   If the request needs both, propose two linked documents and wait for approval. If the intended outcome is
+   unclear, ask before choosing. Keep the resulting documents in Russian.
+4. Gather primary sources. Open current official pages for facts that can change over time.
+5. Show the user the proposed path, section outline, and main sources. Wait for explicit approval before writing.
+6. Fill every frontmatter field and the `Источники` section. Cite sources beside time-sensitive claims.
+7. Set `status: current` only after verifying every substantive claim. Otherwise use `needs-review`.
+8. Add the document to the `README.md` navigation.
+9. Run `python3 scripts/validate_docs.py` and fix errors caused by the change.
 
-## Условия остановки
+## Stop conditions
 
-Остановись и запроси уточнение, если тема допускает несколько существенно разных документов, нужный вендор не
-определён или источник нельзя использовать публично.
+Ask for clarification if the topic could reasonably become several different documents, the relevant vendor is
+unclear, or a required source cannot be used in a public repository. Do not choose a materially different scope
+or publish a restricted source on the user's behalf.
 
-## Пример предложения
+## Example proposal
+
+The following Russian text is an example of the proposal to show before creating the file:
 
 ```markdown
 Путь: docs/models/context-windows.md

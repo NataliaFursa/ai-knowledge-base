@@ -24,6 +24,7 @@
 
 - [Agent Skills в Claude Code и OpenAI Codex](docs/agent-skills/claude-code-and-codex.md)
 - [Лимиты скиллов и файлов инструкций](docs/agent-skills/limits.md)
+- [Скиллы в веб- и десктоп-приложениях](docs/agent-skills/web-and-desktop.md)
 
 ## Статусы документов
 

@@ -1,9 +1,9 @@
 ---
 name: find-ai-knowledge
-description: Searches AI Knowledge Base and answers with source links and verification dates. Use for questions covered by the knowledge base.
+description: Searches AI Knowledge Base and answers read-only questions with article status, verification dates, and primary sources.
 ---
 
-1. Определи корень текущего Git-репозитория.
-2. Прочитай `agent-workflows/find-ai-knowledge.md` относительно корня репозитория.
-3. Выполни процедуру из этого файла.
-4. Если файл отсутствует, остановись и сообщи точный путь.
+## Workflow
+
+1. Read the [shared workflow](../../../agent-workflows/find-ai-knowledge.md) in full.
+2. Follow its procedure. If the file is unavailable, stop and report its exact path.

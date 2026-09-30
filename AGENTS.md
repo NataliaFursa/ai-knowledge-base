@@ -1,22 +1,22 @@
 # AI Knowledge Base
 
-## Назначение
+## Purpose
 
-Репозиторий содержит русскоязычные статьи об AI-инструментах и воспроизводимые проверки их поведения.
+This repository contains Russian-language articles about AI tools and reproducible checks of their behavior.
 
-## Работа с документами
+## Working with documents
 
-- Используй `README.md` как индекс и открывай только документы, относящиеся к запросу.
-- Отдавай приоритет официальной документации, спецификациям и исходному коду.
-- Ставь источник рядом с изменяемым во времени утверждением и добавляй его в раздел `Источники`.
-- Разделяй документированный факт, результат эксперимента и авторский вывод.
-- Меняй `last_verified` только после полной проверки всех существенных утверждений статьи.
-- При частичном дополнении меняй только `last_updated` и дату проверки нового источника.
-- Если источник не подтверждает утверждение однозначно, сохрани оговорку в тексте.
+- Use `README.md` as the index and open only documents relevant to the request.
+- Prefer official documentation, specifications, and source code.
+- Cite a source next to each time-sensitive claim and include it in the article's `Источники` section.
+- Distinguish documented facts, experimental observations, and author inferences.
+- Change `last_verified` only after checking every substantive claim in the article.
+- For a partial addition, change only `last_updated` and the verification date of the new source.
+- Preserve uncertainty when a source does not unambiguously support a claim.
 
-## Изменения
+## Changes
 
-Перед созданием нового документа или существенной перестройкой существующего покажи пользователю путь,
-структуру и предполагаемые источники. Записывай изменения после явного подтверждения.
+Before creating a document or substantially restructuring an existing one, show the user its path, proposed
+structure, and primary sources. Write the changes only after explicit approval.
 
-После изменения Markdown или скиллов запусти `python3 scripts/validate_docs.py`.
+After changing Markdown or skills, run `python3 scripts/validate_docs.py`.

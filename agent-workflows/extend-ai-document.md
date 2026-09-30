@@ -1,28 +1,29 @@
-# Дополнение документа
+# Extend an AI document
 
-## Результат
+## Outcome
 
-Добавь одну находку в существующую статью, сохрани её границы и не создавай видимость полной повторной проверки.
+Add one verified finding to an existing article without implying that the whole article was rechecked.
 
-## Порядок работы
+## Workflow
 
-1. Однозначно определи статью и раздел, к которому относится новая информация.
-2. Проверь саму находку по первичному источнику или воспроизводимому эксперименту.
-3. Определи, дополняет ли информация статью или противоречит ей.
-4. Предложи пользователю раздел, краткую формулировку и источник. Дождись явного подтверждения.
-5. Внеси минимальное связное изменение и добавь источник в раздел `Источники`.
-6. Обнови `last_updated`.
-7. Не меняй `last_verified`, если остальные утверждения статьи не перепроверялись.
-8. При обнаруженном противоречии установи `status: needs-review` и опиши, какая часть требует полного обновления.
-9. Запусти `python3 scripts/validate_docs.py`.
+1. Identify the article and the section that owns the finding.
+2. Verify the finding against a primary source or a reproducible experiment.
+3. Determine whether it supplements or contradicts the current article.
+4. Show the user the proposed section, a concise formulation, and the source. Wait for explicit approval.
+5. Make the smallest coherent edit and add the source to `Источники`.
+6. Update `last_updated`. Keep `last_verified` unchanged unless every substantive claim was rechecked.
+7. If the finding contradicts the article, set `status: needs-review` and identify what needs a full refresh.
+8. Run `python3 scripts/validate_docs.py`.
 
-## Границы
+## Boundaries
 
-- Не добавляй фрагмент только потому, что он интересен: он должен соответствовать теме и уровню подробности статьи.
-- Не переписывай соседние разделы без согласованного расширения задачи.
-- Не представляй единичный эксперимент как документированное поведение всех версий продукта.
+- The finding must fit the article's topic and level of detail. Do not add it merely because it is interesting.
+- Do not rewrite neighboring sections without approval for the broader change.
+- Do not present one experiment as documented behavior across all product versions.
 
-## Пример предложения
+## Example proposal
+
+The following Russian text is an example of the proposal to show before editing:
 
 ```markdown
 Документ: docs/agent-skills/limits.md

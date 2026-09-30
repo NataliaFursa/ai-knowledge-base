@@ -1,29 +1,32 @@
-# Полное обновление документа
+# Refresh an AI document
 
-## Результат
+## Outcome
 
-Перепроверь всю статью, обнови изменившиеся сведения и поставь новую дату `last_verified` только после полного аудита.
+Audit an entire article against current primary sources, update changed information, and advance
+`last_verified` only after a complete check.
 
-## Порядок работы
+## Workflow
 
-1. Однозначно определи документ. Если подходят несколько файлов, покажи их пользователю и остановись.
-2. Выпиши существенные изменяемые утверждения и источники, которые их подтверждают.
-3. Открой каждый первичный источник заново. Проверяй содержание утверждения, а не только доступность URL.
-4. Для исчезнувшей страницы найди официальный новый адрес или пометь утверждение как непроверенное.
-5. Раздели результаты на `подтверждено`, `изменилось`, `не удалось проверить` и `источник заменён`.
-6. Покажи пользователю план изменений и дождись явного подтверждения.
-7. Обнови текст, ссылки, `last_updated`, статус и даты проверки источников.
-8. Обнови `last_verified`, только если проверены все существенные утверждения документа.
-9. Если полная проверка невозможна, оставь прежнюю дату и установи `status: needs-review`.
-10. Запусти `python3 scripts/validate_docs.py`.
+1. Identify the article unambiguously. If several files match, show them to the user and stop.
+2. List its substantive time-sensitive claims and the sources supporting them.
+3. Reopen every primary source. Verify what it says, not merely whether its URL still works.
+4. For a missing page, find a current official replacement or mark the related claim unverified.
+5. Classify findings as confirmed, changed, unverified, or source replaced.
+6. Show the user the proposed changes and wait for explicit approval.
+7. Update the article, links, `last_updated`, status, and source verification dates.
+8. Advance `last_verified` only if every substantive claim was verified.
+9. If a full check is impossible, preserve the previous `last_verified` and set `status: needs-review`.
+10. Run `python3 scripts/validate_docs.py`.
 
-## Границы
+## Boundaries
 
-- Не заменяй первичный источник пересказом, если официальный материал доступен.
-- Не удаляй полезный исторический контекст без пояснения, что именно изменилось.
-- Не расширяй тему статьи несвязанными находками во время аудита.
+- Prefer an available primary source over a secondary summary.
+- Keep useful historical context, with an explanation of what changed.
+- Do not expand the article with unrelated findings during the audit.
 
-## Пример отчёта перед изменением
+## Example pre-edit report
+
+The following Russian text is an example of the report to show before editing:
 
 ```markdown
 Подтверждено: формат name и description.
